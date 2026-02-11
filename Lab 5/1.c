@@ -4,8 +4,8 @@ int main(){
     int n, m;
     scanf("%d %d", &n, &m);
     int matrix[n][m];
-    for(int i = 0; i<n; i++){
-        for(int j = 0; j<m; j++){
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
             scanf("%d", &matrix[i][j]);
         }
     }
@@ -27,18 +27,18 @@ int main(){
 
     int sum = prefix[a2][b2];
     if(a1 > 0){
-        sum -= prefix[a1-1][b2];
+        sum -= prefix[a1 - 1][b2];
     }
     if(b1 > 0){
-        sum -= prefix[a2][b1-1];
+        sum -= prefix[a2][b1 - 1];
     }
     if(a1 > 0 && b1 > 0){
         sum += prefix[a1 - 1][b1 - 1];
     }
     
 
-    for(int i = 0; i<n; i++){
-        for(int j = 0; j<m; j++){
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
             printf("%d ", prefix[i][j]);
         }
         printf("\n");
